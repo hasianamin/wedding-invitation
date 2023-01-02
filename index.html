@@ -36,12 +36,38 @@
       gtag('config', 'UA-23064379-20');
     </script>
     <!-- Begin Script for Countdown -->
-
+    <script type="text/javascript">
+      const closeModal = () => {
+        const element = document.getElementById("my-modal")
+        element.classList.remove("is-active")
+        document.getElementById("my_audio").play();
+      }
+    </script>
     <!-- Github Button -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
 
   <body>
+    <audio src="./image/backsound.webm" id="my_audio" loop="loop"></audio>
+    <div class="modal is-active" id="my-modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Undangan Pernikahan</p>
+          <button class="delete" aria-label="close" onclick="closeModal()"></button>
+        </header>
+        <section class="modal-card-body">
+          <div>
+            Kepada Bapak / Ibu / Kerabat yang kami hormati <br/>
+            Ijinkan kami untuk mengundang di acara pernikahan <strong>Gabby dan Hasian</strong>
+          </div>
+          <div style="display: flex; justify-content: center; margin-top: 2rem;">
+            <button class="button is-info" style="display: flex; justify-content: center;" onclick="closeModal()">Open Invitation</button>
+          </div>
+        </section>
+      </div>
+    </div>
+    
     <!-- Begin Preloader -->
     <div class="preloader-wrapper">
       <div class="preloader">
